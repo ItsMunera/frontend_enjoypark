@@ -1,0 +1,24 @@
+{
+  "short_name": "MyApp",
+  "name": "My Awesome App",
+  "icons": [
+    {
+      "src": "icons/icon-192x192.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "icons/icon-512x512.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ],
+  "start_url": "./index.html",
+  "display": "fullscreen",
+  "theme_color": "#ffffff",
+  "background_color": "#ffffff",
+  "orientation": "portrait",
+  "scope": "./",
+  "description": "La mia app React installabile come PWA",
+  "lang": "it-IT"
+}

@@ -1,0 +1,24 @@
+@import "tailwindcss";
+
+::-webkit-scrollbar {
+  width: 0 !important;
+}
+
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+
+::-webkit-scrollbar-thumb {
+  background: transparent;
+}
+
+
+::-webkit-scrollbar-thumb:hover {
+  background: transparent;
+}
+
+.circleTicket {
+  clip-path: inset(0 0 0 50%); 
+}
