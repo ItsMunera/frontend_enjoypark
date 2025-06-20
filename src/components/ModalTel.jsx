@@ -120,19 +120,13 @@ const ModalTel = ({ isOpen, toggleIsOpen, initialStep = 1 }) => {
           </div>
           <div className="flex flex-col">
             <p className="text-xl text-stone-800 font-semibold">
-              Percorso personalizzato
+              Scegli percorso
             </p>
             <p className="mt-1 mb-3">
-              Scegli tra i percorsi predefiniti o creane uno tuo
+              Scegli tra i percorsi predefiniti 
             </p>
           </div>
           <div className="flex flex-col gap-4 mb-4">
-            <button
-              onClick={nextStep}
-              className="px-4 flex gap-2 py-2 bg-[#1D6069] text-white rounded-full justify-center"
-            >
-              <span>+</span> Crea percorso
-            </button>
             {user?.code && (
               <button
                 onClick={() => setStep(3)}
@@ -198,7 +192,7 @@ const ModalTel = ({ isOpen, toggleIsOpen, initialStep = 1 }) => {
       )}
 
       {/* Step 2 - Creazione percorso */}
-      {step === 2 && (
+      {/* {step === 2 && (
         <>
           <p className="text-xl text-stone-800 mb-6 font-semibold">
             Percorso personalizzato
@@ -222,7 +216,7 @@ const ModalTel = ({ isOpen, toggleIsOpen, initialStep = 1 }) => {
             Salva percorso
           </button>
         </>
-      )}
+      )} */}
 
       {/* Step 3 - I miei percorsi */}
       {step === 3 && (
@@ -267,7 +261,7 @@ const ModalTel = ({ isOpen, toggleIsOpen, initialStep = 1 }) => {
               </div>
               <button
                 onClick={() => setCartItems((prev) => [...prev, biglietto])}
-                className="w-full bg-[#1D6069] text-white py-2 rounded-full"
+                className="w-full bg-[#1D6069] hover:bg-[#1D606990] transition-all duration-300 text-white py-2 rounded-full"
               >
                 aggiungi al carrello
               </button>
@@ -294,7 +288,7 @@ const ModalTel = ({ isOpen, toggleIsOpen, initialStep = 1 }) => {
               </div>
               <button
                 onClick={handlePurchase}
-                className="mt-4 w-full bg-green-600 text-white py-2 rounded-full"
+                className="mt-4 w-full bg-[#1D6069] hover:bg-[#1D606990] transition-all duration-300 text-white py-2 rounded-full"
               >
                 Acquista
               </button>

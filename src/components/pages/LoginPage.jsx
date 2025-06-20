@@ -108,14 +108,7 @@ const LoginPage = () => {
               />
               <label htmlFor="rememberMe">Ricordami</label>
             </div>
-            <div>
-              <Link
-                className="text-[#1D6069] underline underline-offset-3"
-                to="/forgot-password"
-              >
-                Password dimenticata?
-              </Link>
-            </div>
+            
           </div>
 
           {/* Pulsante Login */}

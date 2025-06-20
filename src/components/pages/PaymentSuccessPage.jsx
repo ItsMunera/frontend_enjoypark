@@ -71,7 +71,7 @@ const PaymentSuccessPage = () => {
     <div className="min-h-screen bg-gray-50 flex flex-col items-center justify-center p-4">
       <div className="bg-white rounded-xl shadow-lg p-8 max-w-md w-full text-center">
         <div className="mb-6">
-          <h1 className="text-2xl font-bold text-green-600 mb-2">
+          <h1 className="text-2xl font-bold text-[#1D6069] mb-2">
             Pagamento completato con successo!
           </h1>
           <p className="text-gray-600">
@@ -100,14 +100,14 @@ const PaymentSuccessPage = () => {
         <div className="flex flex-col space-y-3">
           <button
             onClick={() => navigate("/profile")}
-            className="w-full py-2 px-4 bg-blue-600 hover:bg-blue-700 text-white rounded-lg transition duration-200"
+            className="w-full py-2 px-4 bg-[#1D6069] hover:bg-[#1D606990] text-white rounded-lg transition duration-300 cursor-pointer"
           >
             Vai al tuo profilo
           </button>
 
           <button
             onClick={() => navigate("/")}
-            className="w-full py-2 px-4 bg-gray-200 hover:bg-gray-300 text-gray-800 rounded-lg transition duration-200"
+            className="w-full py-2 px-4 bg-gray-200 hover:bg-gray-300 text-gray-800 rounded-lg transition duration-200 cursor-pointer"
           >
             Torna alla home
           </button>

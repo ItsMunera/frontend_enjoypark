@@ -23,7 +23,7 @@ const RegisterPage = () => {
         last_name: data.last_name,
         email: data.email,
         password: data.password,
-        password_confirmation: data.password_confirmation, // Laravel richiede conferma
+        password_confirmation: data.password_confirmation,
       });
 
       navigate("/login");
@@ -37,11 +37,11 @@ const RegisterPage = () => {
   const watchCheckbox = watch("termsAndCondition");
 
   return (
-    <div className="w-full max-w-lg absolute left-1/2 transform -translate-x-1/2 top-1/2">
+    <div className="w-[300px] md:w-[512px] absolute left-1/2 transform -translate-x-1/2 -translate-y-1/2 top-1/2">
       <p className="text-center mb-8 text-2xl font-semibold">Registrati</p>
       <form onSubmit={handleSubmit(onSubmit)}>
         <div className="w-full rounded-2xl bg-white border-2 border-[#1D6069] p-6 gap-6">
-          <div className="grid grid-cols-2 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {/* Nome */}
             <div className="w-full">
               <label

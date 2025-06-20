@@ -5,25 +5,25 @@ import biglietti from "./data/biglietti";
 import { useNavigate } from "react-router";
 import { useUser } from "./context/UserProvider";
 
-// Define the predefined paths with their attractions
+
 const predefinedPaths = [
   {
     id: 1,
     title: "Percorso Breve",
     description: "Un percorso veloce con 3 attrazioni principali",
-    attractions: attrazioni.slice(0, 3) // First 3 attractions
+    attractions: attrazioni.slice(0, 3)
   },
   {
     id: 2,
     title: "Percorso Medio",
     description: "Un percorso moderato con 4 attrazioni",
-    attractions: attrazioni.slice(0, 4) // First 4 attractions
+    attractions: attrazioni.slice(0, 4) 
   },
   {
     id: 3,
     title: "Percorso Lungo",
     description: "Un percorso completo con tutte le attrazioni",
-    attractions: [...attrazioni] // All attractions
+    attractions: [...attrazioni]
   }
 ];
 
@@ -68,7 +68,7 @@ const ModalDesk = ({ isOpen, toggleIsOpen, initialStep = 1 }) => {
     if (selectedPath && user) {
       setUserPaths([...userPaths, selectedPath]);
       setSelectedPath(null);
-      // Here you would typically make an API call to save the path to the user's account
+      
     }
   };
 
@@ -119,7 +119,7 @@ const ModalDesk = ({ isOpen, toggleIsOpen, initialStep = 1 }) => {
                     prevStep();
                   }
                 }}
-                className="cursor-pointer text-blue-600"
+                className="cursor-pointer"
               >
                 ← Torna indietro
               </div>
@@ -140,19 +140,14 @@ const ModalDesk = ({ isOpen, toggleIsOpen, initialStep = 1 }) => {
               </div>
               <div className="flex flex-col">
                 <p className="text-xl text-stone-800 font-semibold">
-                  Percorso personalizzato
+                  Scegli percorso
                 </p>
                 <p className="mt-1 mb-3">
-                  Scegli tra i percorsi predefiniti o creane uno tuo
+                  Scegli tra i percorsi predefiniti
                 </p>
               </div>
               <div className="flex gap-4 mb-4">
-                <button
-                  onClick={nextStep}
-                  className="px-4 flex gap-2 py-2 bg-[#1D6069] text-white rounded-full"
-                >
-                  <span>+</span> Crea percorso
-                </button>
+                
                 {user?.code && (
                   <button
                     onClick={() => setStep(3)}
@@ -220,7 +215,7 @@ const ModalDesk = ({ isOpen, toggleIsOpen, initialStep = 1 }) => {
           )}
 
           {/* Step 2 - Selezione attrazioni */}
-          {step === 2 && (
+          {/* {step === 2 && (
             <>
               <p className="text-xl text-stone-800 mb-6 font-semibold">
                 Percorso personalizzato
@@ -244,7 +239,7 @@ const ModalDesk = ({ isOpen, toggleIsOpen, initialStep = 1 }) => {
                 Salva percorso
               </button>
             </>
-          )}
+          )} */}
 
           {/* Step 3 - I miei percorsi */}
           {step === 3 && (
@@ -261,12 +256,6 @@ const ModalDesk = ({ isOpen, toggleIsOpen, initialStep = 1 }) => {
                     <div key={path.id} className="border p-4 rounded-lg">
                       <h3 className="font-semibold">{path.title}</h3>
                       <p className="text-sm text-gray-600">{path.attractions.length} attrazioni</p>
-                      <button 
-                        className="mt-2 text-sm text-blue-600"
-                        onClick={() => handlePathSelect(path)}
-                      >
-                        Visualizza dettagli
-                      </button>
                     </div>
                   ))}
                 </div>
@@ -296,7 +285,7 @@ const ModalDesk = ({ isOpen, toggleIsOpen, initialStep = 1 }) => {
                   </div>
                   <button
                     onClick={() => setCartItems((prev) => [...prev, biglietto])}
-                    className="w-full bg-[#1D6069] text-white py-2 rounded-full"
+                    className="w-full bg-[#1D6069] hover:bg-[#1D606990] transition-all duration-300 cursor-pointer text-white py-2 rounded-full"
                   >
                     aggiungi al carrello
                   </button>
@@ -326,7 +315,7 @@ const ModalDesk = ({ isOpen, toggleIsOpen, initialStep = 1 }) => {
 
                   <button
                     onClick={handlePurchase}
-                    className="mt-4 w-full bg-green-600 text-white py-2 rounded-full"
+                    className="mt-4 w-full bg-[#1D6069] hover:bg-[#1D606990] transition-all duration-300 cursor-pointer text-white py-2 rounded-full"
                   >
                     Acquista
                   </button>

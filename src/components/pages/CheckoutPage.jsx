@@ -47,7 +47,7 @@ const CheckoutPage = () => {
   const totalPrice = cartItems.reduce((sum, item) => sum + item.price, 0);
 
   const onSubmit = (data) => {
-    // Simula un pagamento (senza chiamate API)
+    
     console.log("Dati pagamento:", data);
     console.log("Articoli acquistati:", cartItems);
 
@@ -91,7 +91,7 @@ const CheckoutPage = () => {
               </div>
             ))}
 
-            <div className="flex justify-between items-center pt-4 mt-2 border-t">
+            <div className="flex justify-between items-center pt-4 mt-2 ">
               <p className="font-bold text-lg">Totale</p>
               <p className="font-bold text-lg">{totalPrice.toFixed(2)}€</p>
             </div>
@@ -164,7 +164,7 @@ const CheckoutPage = () => {
             )}
           </div>
 
-          <div className="grid grid-cols-2 gap-4">
+          <div className="grid lg:grid-cols-2 gap-4">
             {/* Data scadenza */}
             <div>
               <label
@@ -232,7 +232,7 @@ const CheckoutPage = () => {
           disabled={cartItems.length === 0}
           className={`mt-6 w-full py-3 px-4 rounded-md text-white font-bold ${
             cartItems.length > 0
-              ? "bg-green-600 hover:bg-green-700"
+              ? "bg-[#1D6069] hover:bg-[#1D606990] transition-all duration-300 cursor-pointer"
               : "bg-gray-400 cursor-not-allowed"
           }`}
         >

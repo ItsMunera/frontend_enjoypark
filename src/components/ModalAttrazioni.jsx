@@ -85,22 +85,22 @@ const ModalAttrazioni = ({
         user_code: userCode,
       });
 
-      // 1. Ricarica i dati dell'attrazione dal server per ottenere i valori aggiornati
+      
       const updatedAttraction = await myaxios.get(
         `/api/attractions/${selectedId}`
       );
 
-      // 2. Aggiorna lo stato con i dati freschi dal backend
+      
       setAttraction(updatedAttraction.data);
 
-      // 3. Calcola il nuovo tempo di attesa basato sul conteggio aggiornato
+      
       const newQueueTime = calculateQueueTime(
         updatedAttraction.data.bookings_count || 0
       );
       setQueueTime(newQueueTime);
       setCurrentTimer(updatedAttraction.data.timer || 0);
 
-      // Resetta il form
+      
       setUserCode("");
       setCodeError("");
 
@@ -157,9 +157,7 @@ const ModalAttrazioni = ({
               <p className="text-sm text-gray-700">
                 👥 <strong>Persone in coda:</strong>{" "}
                 {attraction?.bookings_count || 0}
-                <span className="block text-xs mt-1">
-                  (Ogni persona aggiunge 3 minuti al tempo di attesa)
-                </span>
+                
               </p>
             </div>
 
@@ -191,12 +189,8 @@ const ModalAttrazioni = ({
               onClick={handleBook}
               className="w-full bg-blue-600 text-white py-3 rounded-xl hover:bg-blue-700 transition font-medium"
             >
-              Prenota con codice
+              Prenotati
             </button>
-
-            <p className="text-xs text-gray-500 mt-2 text-center">
-              La prenotazione aggiungerà 3 minuti al tempo di attesa
-            </p>
           </>
         )}
       </div>

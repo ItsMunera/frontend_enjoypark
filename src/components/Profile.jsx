@@ -40,7 +40,7 @@ const Profile = () => {
       ) : (
         <Link
           to="/login"
-          className="inline-flex items-center bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded-full text-sm font-medium transition-colors shadow-sm"
+          className="inline-flex items-center bg-[#1D6069] hover:bg-[#1D606990] text-white px-4 py-2 rounded-full text-sm font-medium transition-colors shadow-sm"
         >
           Accedi
         </Link>
